@@ -1,0 +1,693 @@
+/*
+font-family: 'Ubuntu Mono';
+font-family: 'Ubuntu', sans-serif;
+font-family: 'Ubuntu Condensed', sans-serif;
+font-family: 'PT Sans', sans-serif;
+font-family: 'PT Sans Narrow', sans-serif;
+font-family: 'PT Serif Caption', serif;
+font-family: 'PT Serif', serif;
+font-family: 'PT Sans Caption', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Open Sans Condensed', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+font-family: 'Roboto Slab', serif;
+
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Noto Serif', serif;
+font-family: 'Playfair Display', serif;
+font-family: 'Yeseva One', cursive;
+font-family: 'Oranienbaum', serif;
+font-family: 'Cousine', ;
+font-family: 'Marmelad', sans-serif;
+font-family: 'Exo 2', sans-serif;
+font-family: 'Scada', sans-serif;
+*/
+
+html {
+    min-height: 100%;
+}
+
+body {
+    font-family: 'PT Sans', arial, sans-serif;
+    background: #fff;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h6, {
+    margin: 1em 0 .5em 0;
+    line-height: 1.2em;
+    font-weight: 300;
+    font-family: "Roboto", Verdana, arial, sans-serif;
+}
+
+h5 {
+    margin: -1.2em 0 .5em 9em;
+    line-height: 1.3em;
+    font-weight: 300;
+    font-family: "Roboto", Verdana, arial, sans-serif;
+}
+
+h1 {
+    font-size: 2em;
+    padding: 30px 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+h2 {
+    font-size: 1.6em;
+}
+
+h3 {
+    font-size: 1.4em;
+    color: #fcf4d0;
+}
+
+h4 {
+    font-size: 1.2em;
+}
+
+h5 {
+    font-size: 3.5em;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+i {
+    font-style: italic;
+}
+
+b {
+    font-weight: bold;
+}
+
+ul, ol {
+    margin-left: 2em;
+}
+
+ul {
+    list-style: disc;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
+li {
+    margin-bottom: 1em;
+    line-height: 1.2em;
+}
+
+p {
+    line-height: 1.2em;
+    margin-bottom: 1.25em;
+}
+
+p, ul, ol {
+    font-size: 1em;
+}
+
+table td {
+    vertical-align: top;
+    padding: 10px;
+}
+
+blockquote {
+    font-weight: 600;
+    margin: 2em 0 2em 0;
+    padding: 1em;
+    font-size: 1.2em;
+    font-family: 'Roboto', sans-serif;
+}
+
+blockquote p {
+    margin: 0;
+}
+
+a:link, a:visited {
+    color: #0055cc;
+}
+
+a:hover {
+    color: #c00000;
+}
+
+.foto-frame {
+    display: inline-block;
+    background: #f4f4f6;
+    padding: 10px;
+    margin: 15px 15px 15px 0;
+    -webkit-box-shadow: 0px 0px 14px rgba(50, 50, 50, 0.3);
+    box-shadow: 0px 0px 14px rgba(50, 50, 50, 0.3);
+}
+
+.foto-frame img {
+    -webkit-box-shadow: 0px 0px 14px rgba(50, 50, 50, 0.2);
+    box-shadow: 0px 0px 14px rgba(50, 50, 50, 0.2);
+}
+
+.video-frame {
+    border: 1px solid #ddd;
+    display: inline-block;
+    background: #f4f4f6;
+    padding: 10px;
+    margin: 0 15px 15px 0;
+    -webkit-box-shadow: 0px 0px 14px rgba(50, 50, 50, 0.3);
+    box-shadow: 0px 0px 14px rgba(50, 50, 50, 0.3);
+}
+
+.video-frame iframe {
+    -webkit-box-shadow: 0px 0px 14px rgba(50, 50, 50, 0.2);
+    box-shadow: 0px 0px 14px rgba(50, 50, 50, 0.2);
+}
+
+.ico-circle {
+    margin-left: -13px;
+    padding: 10px;
+    height: 250px;
+    width: 250px;
+    background-color: #d4d4d4;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    box-shadow: 1px 3px 10px #666;
+}
+
+.ico-circle img {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    height: 230px;
+    width: 230px;
+}
+
+.wrap {
+    margin: 0 auto;
+    min-width: 970px;
+    max-width: 970px;
+}
+
+.clear {
+    clear: both;
+    height: 0;
+    overflow: hidden;
+}
+
+/* Смысловые блоки  */
+.structblock {
+    width: 100%;
+}
+
+.structblock:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.structblock .col {
+    float: left;
+}
+
+.structblock .left {
+    float: left;
+}
+
+.structblock .center {
+    float: left;
+}
+
+.structblock .right {
+    float: left;
+}
+
+/* Блок с двумя колонками */
+.structblock.col2 {
+}
+
+.structblock.col2 .left, .structblock.col2 .right, .structblock.col2 .col {
+    width: 50%;
+}
+
+/* Блок с тремя колонками */
+.structblock.col3 {
+}
+
+.structblock.col3 .left, .structblock.col3 .center, .structblock.col3 .right, .structblock.col3 .col {
+    width: 33%;
+}
+
+/* Блок с 4 колонками */
+.structblock.col4 {
+}
+
+.structblock.col4 .left, .structblock.col4 .center, .structblock.col4 .right, .structblock.col4 .col {
+    width: 25%;
+}
+
+.structblock .col p {
+    margin-right: 15px;
+}
+
+/* Шапка */
+header {
+    border-top: 1px solid #45a80d;
+    width: 100%;
+    padding-bottom: 75px;
+    background: url('../img/headerbg2.jpg') center top no-repeat;
+}
+
+header h1, header h2 {
+    margin: 0;
+}
+
+header h1 {
+    margin-top: 100px;
+    text-align: left;
+    color: #901e0f;
+    text-transform: uppercase;
+    font-size: 4em;
+}
+
+header h5 {
+    text-align: left;
+    color: #901e0f;
+    text-transform: uppercase;
+    font-size: 3.5em;
+}
+
+header h2 {
+    margin-left: 350px;
+    color: #08710c;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.6em;
+}
+
+header p.memo {
+    margin: 30px 0 0 350px;
+    font-size: 1.4em;
+    font-family: "Roboto Condensed";
+}
+
+header .panel {
+    margin: 10px 0 0;
+    padding: 15px 0;
+    background: #fefaef;
+}
+
+header .panel h1 {
+    margin-top: 0;
+    color: #111;
+    text-align: center;
+    font-size: 1.4em;
+}
+
+.action {
+    margin: 220px 0 0 610px;
+    width: 280px;
+    padding: 92px 0 13px 35px;
+    text-align: center;
+    background: none;
+}
+
+.orderoffer {
+    margin: 0 0 0 608px;
+    padding: 14px 0 0 35px;
+    width: 280px;
+    background: none;
+}
+
+.orderoffer .price {
+    margin: 0 0 15px;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    font-family: "Roboto Condensed";
+}
+
+
+
+/* Главная */
+.sec_main {
+}
+
+.img {
+    color: #111;
+    width: 80%;
+    height: 300px;
+    background: #fff;
+    border: 1px dashed #666;
+}
+
+/* Что говорят врачи */
+.sec_doctor {
+    background: #beed98;
+    padding: 40px 0 35px 0;
+}
+
+.sec_doctor h1 {
+    margin-top: 10px;
+}
+
+/* СПЕЦ ПРЕДЛОЖЕНИЕ */
+.sec_spec {
+    background: url('../img/spec_bg.jpg') no-repeat;
+    padding: 40px 0 35px 0;
+}
+
+.sec_spec h1 {
+    margin-top: 10px;
+}
+
+/* Чем опасен диабет  */
+.sec_danger {
+    padding: 25px 0;
+    background: #a82f2f;
+    color: #fff;
+}
+
+.sec_danger h1, .sec_danger h3 {
+    color: #fff000;
+    margin-top: 0;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.sec_danger h1 {
+    margin-bottom: 1em;
+}
+
+/* Отзывы */
+.sec_testimonials {
+}
+
+.testimonial {
+    background: #f6ebce url('../img/testimonialbg.jpg') 0 0 no-repeat;
+    margin: 0 0 2em 0;
+    padding: 30px 30px;
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+}
+
+.testimonial .author {
+    text-align: right;
+    margin-bottom: 0;
+    font-style: italic;
+}
+
+/* Для кого предназначен чай*/
+.sec_portrait {
+    padding: 25px 0;
+    background: #fff;
+}
+
+/* Остерегайтесь подделок*/
+.sec_warning {
+    padding: 25px 0;
+    background: #fff;
+}
+
+/* Успей купить со скидкой*/
+.sec_orderform {
+    padding: 25px 0;
+    background: #fff;
+}
+
+.sec_orderform h1 {
+    padding: 20px;
+    background: #fff000;
+    color: #000;
+}
+
+.sec_orderform p {
+    margin: 0;
+}
+
+.sec_orderform .price {
+    font-size: 2em;
+    font-weight: bold;
+    font-family: "Roboto Condensed";
+}
+.buybtn.header-act-btn {
+    margin-top: 4px;
+}
+.buybtn {
+    line-height: 30px;
+
+    font-size: 1.5em;
+    text-align: center;
+    cursor: pointer;
+    width: 258px;
+    border-radius: 0px;
+    margin: 30px auto;
+    border: 1px solid #df0909;
+    padding: 15px 10px 15px 10px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #f62b2b;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#f62b2b), to(#d20202));
+    background-image: -webkit-linear-gradient(top, #f62b2b, #d20202);
+    background-image: -moz-linear-gradient(top, #f62b2b, #d20202);
+    background-image: -ms-linear-gradient(top, #f62b2b, #d20202);
+    background-image: -o-linear-gradient(top, #f62b2b, #d20202);
+    background-image: linear-gradient(to bottom, #f62b2b, #d20202);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#f62b2b, endColorstr=#d20202);
+}
+
+.buybtn:hover {
+    border: 1px solid #b30808;
+    background-color: #e40a0a;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#e40a0a), to(#9f0202));
+    background-image: -webkit-linear-gradient(top, #e40a0a, #9f0202);
+    background-image: -moz-linear-gradient(top, #e40a0a, #9f0202);
+    background-image: -ms-linear-gradient(top, #e40a0a, #9f0202);
+    background-image: -o-linear-gradient(top, #e40a0a, #9f0202);
+    background-image: linear-gradient(to bottom, #e40a0a, #9f0202);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#e40a0a, endColorstr=#9f0202);
+}
+
+.buybtn a {
+    color: #fff;
+}
+
+/* Подвал */
+footer {
+    border-top: 2px solid #cc1e20;
+    margin: 50px auto 0;
+    text-align: center;
+    font-size: .9em;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+    line-height: 1.2em;
+}
+
+.text1 {
+    color: #000;
+    font-size: 1.7em;
+}
+
+.text2 {
+    color: #ff0000;
+    font-size: 1.7em;
+}
+
+.text3 {
+    text-align: left;
+}
+
+.text4 {
+    margin: 0;
+}
+
+.text5 {
+    font-size: 1.3em;
+}
+
+.text6 {
+    color: #000;
+    font-size: 1.4em;
+}
+
+.wrap-form {
+    padding-bottom: 70px;
+}
+
+.left-form,
+.right-form {
+    display: inline-block;
+    vertical-align: top;
+    width: 48%;
+}
+
+.input-wrap {
+    padding-bottom: 14px;
+}
+
+.input-wrap p {
+    color: #333;
+    font-weight: bold;
+    text-align: right;
+    font-size: 17px;
+    line-height: 16px;
+    margin-bottom: 3px;
+    padding-right: 5px;
+}
+
+.input-wrap p.p-small {
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.input-wrap input {
+    height: 34px;
+    border: 1px solid #7F9DB9;
+    padding: 0 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    width: 300px;
+}
+
+.submit-wrap {
+    text-align: center;
+}
+
+.submit-wrap input {
+    font: 26px/30px Arial;
+    background: #77A800;
+    color: #FFF;
+    padding: 16px 20px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    text-shadow: -1px -1px #6D8607;
+    display: inline-block;
+    font-weight: bold;
+    margin: 10px auto;
+    border: 0;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.image-sale {
+    position: relative;
+}
+
+.sale-old {
+    position: absolute;
+    top: 111px;
+    left: 593px;
+    color: #e1e1e1;
+    font-size: 25px;
+}
+
+.sale-new {
+    position: absolute;
+    top: 102px;
+    left: 710px;
+    color: #000;
+    font-size: 40px;
+    letter-spacing: -2px;
+    min-width: 144px;
+    text-align: center;
+}
+
+.sale-arrow {
+    position: absolute;
+    top: 3px;
+    left: -4px;
+    z-index: 2;
+}
+
+.show-message__icon {
+    width: 50px !important;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.show-message__info {
+    width: 210px;
+    line-height: normal;
+    display: inline-block;
+    margin-left: 15px;
+    color: #ffffff;
+    vertical-align: middle;
+    margin-bottom: 0;
+}
+
+.show-message_call {
+    background-color: #363636;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.show-message_online {
+    background-color: #CD5555;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.show-message__inner {
+    line-height: 90px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.show-message__item {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px;
+    font-size: 15px;
+    line-height: 90px;
+    border-radius: 10px;
+    display: none;
+    z-index: 1000;
+    font-family: "PT Sans", sans-serif;
+}
+
+.show-message__item p {
+    color: #ffffff;
+    font-family: "PT Sans", sans-serif;
+}
+
+.show-message__item p span {
+    font-size: 15px;
+    color: #ffffff;
+}
+
+.sec_danger {
+    text-align: justify;
+}
+
+.lost_position {
+    display: none !important;
+    opacity: 0 !important;
+}
+
+.block_position {
+    display: block !important;
+    opacity: 1 !important;
+}
+header .wrap {
+    position: relative;
+}
+.testimonial-btn {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
